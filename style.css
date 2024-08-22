@@ -1,0 +1,42 @@
+body{
+    background-color: #89D99D;
+    font-family: 'Courier New', Courier, monospace;
+    
+    
+}
+
+#superior{
+    position: absolute;
+    background-color: #014040;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.text{
+    -webkit-text-stroke: 0.5px black;
+    color: white;
+    font-size: 1.7vw;
+    
+}
+
+#resumo{
+    position: relative;
+    margin-top: 10vh;
+}
+
+.smalltxt{
+    font-weight: bold;
+    font-size: large;
+}
+
+img {
+    
+    border: 5px solid black;
+    border-radius: 50%;
+    position: fixed;
+    right: 20%;
+    bottom: 25%;
+   
+   
+  }
