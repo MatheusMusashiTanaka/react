@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.BFD {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+
+
+body{
+    background-color: #fff6bd;
+}
+
+
+
+
+@keyframes tremer {
+    50% {rotate: 15deg;}
+    100%{rotate: 30deg;}
+}
+.bananalogo{
+    height: 10vh;
+    position: absolute;
+    left: 48%;
+    animation-name: tremer;
+    animation-duration: 2s ;
+    animation: alternate;
+}
+
+
+
+.info{
+    border-color: #eb9f22;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-style:double;
+    padding: 5px;
+    border-radius: 15px;
+    left: 2vw;
+    height: 4vh;
+    width: 4vw;
+    font-size: 90%;
+    aspect-ratio: auto 1;
+    margin: 2vw;
+    margin-right: 0.5vw;
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+
+
+}
+
+.shoppincart{
+    height: 6vh;
+    position: fixed;
+    right: 3vw;
+
+    
+    
+}
+
+.caixa{
+    display: flex;
+    flex-direction: row;
+ 
+    
+    
+}
+
+.head{
+    display: flex;
+   
+    align-items: center;
+    position: fixed;
+    background-color: #242222;
+    top: 0;
+    width: 100%;
+    height: 8vh;
+}
