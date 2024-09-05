@@ -219,7 +219,7 @@ body{
         border-radius: 10dvh;
     }
     .BAB {
-        display: none; /* Hide .BAB on smaller screens */
+        display: none
     }
     .secinfobox{
         background-color: #FFC701;
@@ -252,4 +252,27 @@ footer{
     background-color: #000000;
     bottom: 0;
     left: 0;
+}
+.BAB{
+    position: absolute;
+    top: 50dvh;
+    left: 8dvw;
+    transform: translateY(-50%)  rotate(-10deg);
+    height: auto;
+    width: 25vw;
+    aspect-ratio: 1 / 1;
+    transform-origin: center;
+    
+}
+
+
+.BAB:hover{
+    animation: tremer 1s ease-in-out infinite;
+}
+@keyframes tremer {
+    0% {   transform: translateY(-50%)  rotate(-10deg);}
+    25% {   transform: translateY(-50%)  rotate(-15deg);}
+    50% {   transform: translateY(-50%)  rotate(-10deg);}
+    75% {   transform: translateY(-50%)  rotate(-5deg);}
+    100% {   transform: translateY(-50%)  rotate(-10deg);}
 }
