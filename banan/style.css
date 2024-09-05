@@ -9,8 +9,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    width: 100vw;
+    height: 100;
+    width: 100;
     
 }
 
@@ -22,7 +22,7 @@ a {
 
 .item-text {
     position: absolute;
-    right: -8dvw; 
+    right: -5dvw; 
     top: 20%; 
     transform: translateY(-50%); 
     margin-left: 40px;
@@ -31,7 +31,9 @@ a {
     border-radius: 3px; 
 }   
 body{
+    padding-top: 8vh;
     background-color: #fff6bd;
+    position: relative; 
 }
 
 .grid-item img {
@@ -42,12 +44,12 @@ body{
 
 
 .grid-container {
-    margin-top: 80px;
     display: grid;
     grid-template-columns: repeat(4, 20dvh); 
     grid-template-rows: repeat(3, 20dvh); 
     gap: 5dvh 15dvw; 
     padding: 10px;
+    margin-left: -5dvw;
 }
 
 .grid-item {
@@ -63,20 +65,13 @@ body{
 }
 
 
-
-@keyframes tremer {
-    50% {rotate: 15deg;}
-    100%{rotate: 30deg;}
-}
 .bananalogo{
     height: 10vh;
     position: absolute;
-    left: 48%;
-    animation-name: tremer;
-    animation-duration: 2s ;
+    left: 50%;
     animation: alternate;
+    transform: translateX(-50%); 
 }
-
 
 
 .info{
@@ -96,14 +91,27 @@ body{
     aspect-ratio: auto 1;
     margin: 2vw;
     margin-right: 0.5vw;
+    min-width: 60px;
 }
 
 
+@media screen and (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 20dvh);
+        
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1dvh);
+    }
+}
 
-@media screen and (max-width: 700px) {
-
-
+@media screen and (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 20dvh; 
+    }
 }
 
 .shoppincart{
@@ -118,18 +126,130 @@ body{
 .caixa{
     display: flex;
     flex-direction: row;
- 
-    
-    
+
+
 }
 
 .head{
     display: flex;
-   
     align-items: center;
-    position: fixed;
+    position: absolute;
     background-color: #242222;
     top: 0;
+    left: 0;
     width: 100%;
     height: 8vh;
+}
+
+
+.BAB{
+    position: absolute;
+    top: 50dvh;
+    left: 8dvw;
+    transform: translateY(-50%)  rotate(-10deg);
+    height: auto;
+    width: 25vw;
+    aspect-ratio: 1 / 1;
+    transform-origin: center;
+}
+
+
+.infobox{
+    background-color: #FFC701;
+    box-sizing: border-box;
+    position: absolute;
+    top: 40dvh;
+    left: 60dvw;
+    transform: translate(-50%, -50%); 
+
+    width: 30vw;
+    height: 60vh;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; 
+    padding: 10px; 
+    border-radius: 10dvh;
+
+}
+
+.secinfobox{
+    background-color: #FFC701;
+    box-sizing: border-box;
+    position: absolute;
+    top: 80dvh;
+    left: 60dvw;
+    transform: translate(-50%, -50%); 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 40vw;
+    height: 10vh;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; 
+    padding: 50px; 
+    border-radius: 10dvh;
+    overflow:visible;
+    font-size: 10px;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .infobox{top: 50dvh;
+        left: 50dvw;
+        background-color: #FFC701;
+        box-sizing: border-box;
+        position: absolute;
+        top: 40dvh;
+       
+        transform: translate(-50%, -50%); 
+        overflow:scroll;
+        width: 60vw;
+        height: 60vh;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box; 
+        padding: 10px; 
+        border-radius: 10dvh;
+    }
+    .BAB {
+        display: none; /* Hide .BAB on smaller screens */
+    }
+    .secinfobox{
+        background-color: #FFC701;
+        box-sizing: border-box;
+        position: absolute;
+        top: 80dvh;
+        left: 50dvw;
+        transform: translate(-50%, -50%); 
+        
+        width: 40vw;
+        height: 10vh;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box; 
+        padding-top: 30px;
+        padding: 10px; 
+        border-radius: 10dvh;
+        overflow:scroll;
+    }
+}
+
+footer{
+    position: fixed;
+    color: white;
+    width: 100%;
+    height: 2dvh;
+    font-size: 1.5dvh;
+    background-color: #000000;
+    bottom: 0;
+    left: 0;
 }
