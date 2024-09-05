@@ -50,6 +50,7 @@ body{
     gap: 5dvh 15dvw; 
     padding: 10px;
     margin-left: -5dvw;
+    margin-top: 5dvh;
 }
 
 .grid-item {
@@ -62,11 +63,14 @@ body{
     justify-content: flex-end;
     align-items: center;
     color: #000000;
+    border-width: 4px;
+    border-radius: 10px;
 }
 
 
 .bananalogo{
     height: 10vh;
+    transform-origin: center;
     position: absolute;
     left: 50%;
     animation: alternate;
@@ -104,7 +108,7 @@ body{
 
 @media screen and (max-width: 768px) {
     .grid-container {
-        grid-template-columns: repeat(2, 1dvh);
+        grid-template-columns: repeat(2, 20dvh);
     }
 }
 
@@ -137,7 +141,7 @@ body{
     background-color: #242222;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100dvw;
     height: 8vh;
 }
 
@@ -161,18 +165,21 @@ body{
     top: 40dvh;
     left: 60dvw;
     transform: translate(-50%, -50%); 
-
-    width: 30vw;
-    height: 60vh;
+    font-family:monospace;
+    width: auto;
+    height: 40dvh;
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box; 
     padding: 10px; 
-    border-radius: 10dvh;
+    flex-direction: column;
+    border-radius: 5dvh;
+    font-size: 2dvw;
 
 }
+
 
 .secinfobox{
     background-color: #FFC701;
@@ -190,13 +197,27 @@ body{
     justify-content: center;
     box-sizing: border-box; 
     padding: 50px; 
-    border-radius: 10dvh;
+    border-radius: 5dvh;
     overflow:visible;
     font-size: 10px;
 }
+@media screen and (max-width: 1600px) {
+    .infobox {
+     font-size: 2.5dvw;   
+    }
+} 
 
 
-
+@media screen and (max-width: 1120px) {
+    
+    .infobox {
+        font-size: 2.5dvw;   
+    }
+    .secinfobox {
+        padding:85px;
+        margin-top: 10px;
+    }
+}
 
 @media screen and (max-width: 1000px) {
     .infobox{top: 50dvh;
@@ -205,21 +226,52 @@ body{
         box-sizing: border-box;
         position: absolute;
         top: 40dvh;
-       
+        font-size: 3dvw;
         transform: translate(-50%, -50%); 
-        overflow:scroll;
-        width: 60vw;
-        height: 60vh;
+        width: auto;
+        height: 30dvh;
         color: black;
         display: flex;
         align-items: center;
         justify-content: center;
         box-sizing: border-box; 
         padding: 10px; 
-        border-radius: 10dvh;
+        border-radius: 5dvh;
     }
+    
+    @media screen and (max-width: 965px){
+        .secinfobox {
+           
+            font-size: 0.8dvw; 
+
+        }
+        
+    }
+
+    @media screen and (max-width: 600px){
+        .secinfobox {
+           
+            font-size: 01.0dvw; 
+
+        }
+        
+    }
+
+    @media screen and (max-width: 420px) {
+        .infobox {
+            font-size: 3.5dvw; 
+            height: 50dvw;
+        }
+        .secinfobox {
+           
+            font-size: 1.3dvw; 
+
+        }
+    }
+
+
     .BAB {
-        display: none
+        display: none; 
     }
     .secinfobox{
         background-color: #FFC701;
@@ -237,9 +289,8 @@ body{
         justify-content: center;
         box-sizing: border-box; 
         padding-top: 30px;
-        padding: 10px; 
-        border-radius: 10dvh;
-        overflow:scroll;
+        padding: 90px; 
+        border-radius: 5dvh;
     }
 }
 
@@ -253,26 +304,18 @@ footer{
     bottom: 0;
     left: 0;
 }
-.BAB{
-    position: absolute;
-    top: 50dvh;
-    left: 8dvw;
-    transform: translateY(-50%)  rotate(-10deg);
-    height: auto;
-    width: 25vw;
-    aspect-ratio: 1 / 1;
-    transform-origin: center;
-    
+
+.bananalogo :hover{
+    animation: tremer2 1s ease-in-out infinite;
 }
-
-
 .BAB:hover{
     animation: tremer 1s ease-in-out infinite;
 }
 @keyframes tremer {
     0% {   transform: translateY(-50%)  rotate(-10deg);}
-    25% {   transform: translateY(-50%)  rotate(-15deg);}
+    25% {   transform: translateY(-60%)  rotate(-15deg);}
     50% {   transform: translateY(-50%)  rotate(-10deg);}
-    75% {   transform: translateY(-50%)  rotate(-5deg);}
+    75% {   transform: translateY(-60%)  rotate(-5deg);}
     100% {   transform: translateY(-50%)  rotate(-10deg);}
 }
+
